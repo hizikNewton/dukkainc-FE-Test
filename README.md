@@ -1,12 +1,16 @@
 # Frontend Engingeer Test
 
-This test is meant to be submitted within 48 hours of receipt. We expect that you implement all tasks using React. 
+This test is meant to be submitted within 48 hours of receipt. We expect that you implement all tasks in the same project using React. 
 
-You will be judged on a scale of 100 for completion, correctness, and clean code.
+You will be judged on a scale of 100 for completion, correctness, clean code and documentation.
 
 Tasks 1 & 2 are compulsory. Implementing task 3 is not a requirement. If completed, you will be awarded bonus points. We will also award bonus points for any extra justifiable considerations/improvements added to the application.
 
 Your final score determines whether we will proceed to the next round of the interview.
+
+After completion, please send us a link to your app's implementation privately hosted on GitHub. Please add the following GitHub account as a maintainer: @simone-dexter 
+
+We also expect that you send us a link to an app hosted on either Vercel or Netlify.
 
 
 ## Tasks Background
