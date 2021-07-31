@@ -1,14 +1,10 @@
-import {
-  BrowserRouter as Router,
-  Redirect,
-  Route,
-  Switch,
-} from "react-router-dom";
+import { Router, Redirect, Route, Switch } from "react-router-dom";
 import { CreateEmployee, DetailEmployee, ListEmployee } from "./pages";
+import history from "./utils/history";
 
 function App() {
   return (
-    <Router>
+    <Router history={history}>
       <div className="App">
         <Switch>
           <Route
