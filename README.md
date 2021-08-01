@@ -1,57 +1,46 @@
-# Frontend Engingeer Test
+# Getting Started with Create React App
 
-This test is meant to be submitted within 48 hours of receipt. We expect that you implement all tasks in the same project using React. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-You will be judged on a scale of 100 for completion, correctness, clean code and documentation.
+## Available Scripts
 
-Tasks 1 & 2 are compulsory. Implementing task 3 is not a requirement. If completed, you will be awarded bonus points. We will also award bonus points for any extra justifiable considerations/improvements added to the application.
+In the project directory, you can run:
 
-Your final score determines whether we will proceed to the next round of the interview.
+### `yarn start`
 
-After completion, please send us a link to your app's implementation privately hosted on GitHub. Please add the following GitHub account as a maintainer: @simone-dexter 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-We also expect that you send us a link to an app hosted on either Vercel or Netlify.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
+### `yarn test`
 
-## Tasks Background
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-We are developing an employee loan management portal at Samasys. The goal is to ensure that for any given month, each staff is able to track how much loan they have received as well as how much more they can receive. The portal also has an admin panel that allows the loan managers to view, create, update, delete records about the employees in the organisation.
+### `yarn build`
 
-For the tasks below, we assume that the end user is already logged in and has the required permissions to view the screens or carry out the operations below. In our case, the end user is the admin.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Please note that no API calls should be made. It is completely fine to store the data on the frontend. Also, even though the screens are mobile-specific, we expect that it should fit well for desktop and tablet screens.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Task 1
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Our designer has sent us the designs of some of the pages we would have to implement. The first screen can be seen below:
+### `yarn eject`
 
-![CreateEmployeeProfile](./designs/CreateEmployeeProfile.png)
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-On this screen the user is able to do the following:
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- Create the employee profile
-- Get **timely** feedback on wrong inputs
-- Move the user to the employees listing page after the creation is successful
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## Task 2
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-The second screen below shows a list of all the employees added on the platform. For now, pagination is not a priority but a nice-to-have.
+## Learn More
 
-![EmployeesPage](./designs/EmployeesPage.png)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Hovering on each of the employee listed above, gives the following screen below:
-
-![EmployeesPageMouseHover](./designs/EmployeesPageMouseHover.png)
-
-The user can do the following on this page:
-
-- Delete the employee
-- Clicking the edit button shows an error with a message indicating that the feature is not available at the moment.
-
-## Task 3 (Bonus)
-
-As a bonus task, we want to be able to see the full details of the employee when we click on each of the employee's name or image in the EmployeesPage above. This should take us to the page below:
-
-![EmployeeProfilePage](./designs/EmployeeProfilePage.png)
-
-On this page, the user is only able to view the data. Please feel free to use mock data to implement the screen.
+To learn React, check out the [React documentation](https://reactjs.org/).
