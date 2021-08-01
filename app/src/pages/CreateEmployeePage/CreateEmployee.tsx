@@ -1,5 +1,5 @@
 import { Header } from "../../components/header";
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { FormValidator } from "../../components/form/FormValidator";
 import { ValidationMessage } from "../../components/form/validateMsg";
 import { StyledEmployeeForm, StyledFormField } from "./styles";
@@ -64,7 +64,7 @@ export class CreateEmployee extends Component<Props, State> {
           <StyledEmployeeForm>
             <StyledFormField>
               {Object.entries(data).map(([key, value]) => (
-                <>
+                <Fragment key={key}>
                   <label className={"required"} htmlFor={key}>
                     {this.label[key]}
                   </label>
@@ -75,7 +75,7 @@ export class CreateEmployee extends Component<Props, State> {
                     required
                   />
                   <ValidationMessage field={key} />
-                </>
+                </Fragment>
               ))}
             </StyledFormField>
           </StyledEmployeeForm>
