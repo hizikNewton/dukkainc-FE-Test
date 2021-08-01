@@ -1,8 +1,5 @@
 import styled from "styled-components";
-export const Title = styled.div`
-  h3 {
-  }
-`;
+
 export const StyledEmployeeForm = styled.form``;
 export const StyledFormField = styled.div.attrs({
   className: "form-group",

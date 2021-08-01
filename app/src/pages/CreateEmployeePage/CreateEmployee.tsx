@@ -2,7 +2,7 @@ import { Header } from "../../components/header";
 import React, { Component } from "react";
 import { FormValidator } from "../../components/form/FormValidator";
 import { ValidationMessage } from "../../components/form/validateMsg";
-import { StyledEmployeeForm, StyledFormField, Title } from "./styles";
+import { StyledEmployeeForm, StyledFormField } from "./styles";
 import { ValidateCustomField } from "../../components/form/CustomFieldForm";
 import { Data, ErrorData } from "./types";
 import { IRule } from "../../interface";
@@ -54,10 +54,7 @@ export class CreateEmployee extends Component<Props, State> {
     const { data } = this.state;
     return (
       <>
-        <Header />
-        <Title>
-          <h3>{"CREATE EMPLOYEE PROFILE"}</h3>
-        </Title>
+        <Header title={"CREATE EMPLOYEE PROFILE"} />
         <FormValidator
           data={data}
           rules={this.rules}
