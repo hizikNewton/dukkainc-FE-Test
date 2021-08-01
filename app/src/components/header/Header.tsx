@@ -3,7 +3,7 @@ import { ReactComponent as Menu } from "../../assets/icons/menu.svg";
 import { Title, VerticalBar } from "./styles";
 
 interface Props {
-  title: string;
+  title?: string;
 }
 
 export const Header = ({ title }: Props) => {

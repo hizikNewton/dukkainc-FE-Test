@@ -8,6 +8,7 @@ import { Header } from "../../components/header";
 import { ReactComponent as Edit } from "../../assets/icons/edit.svg";
 import { ReactComponent as Delete } from "../../assets/icons/trash-alt.svg";
 import { AlertMessage } from "../../components/alertMessage";
+import { Link } from "react-router-dom";
 
 interface Props {}
 
@@ -50,9 +51,11 @@ export const ListEmployee = (props: Props) => {
       )}
       {empList?.map((i, idx) => (
         <Card onTouchStart={(e) => handleHover(e, idx)}>
-          <ThumbNail>
-            <img src={pic} alt="profile" />
-          </ThumbNail>
+          <Link to={`/employee/${idx + 1}`}>
+            <ThumbNail>
+              <img src={pic} alt="profile" />
+            </ThumbNail>
+          </Link>
           <Detail>
             <ul>
               <li>{i.fullname.toUpperCase()}</li>
