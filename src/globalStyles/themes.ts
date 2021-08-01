@@ -20,7 +20,12 @@ export const defaultTheme = {
   container: {
     width: 1140,
   },
-  message: {},
+  message: {
+    width: "95%",
+    padding: "0px",
+    backgroundColor: "red",
+    color: "white",
+  },
   grid: {
     containerWidth: 1140,
   },
