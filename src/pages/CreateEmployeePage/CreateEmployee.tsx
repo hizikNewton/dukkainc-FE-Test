@@ -6,6 +6,7 @@ import { StyledEmployeeForm, StyledFormField } from "./styles";
 import { ValidateCustomField } from "../../components/form/CustomFieldForm";
 import { Data, ErrorData } from "./types";
 import { IRule } from "../../interface";
+import { Container } from "../../components/contaianer";
 
 interface Props {}
 interface State {
@@ -32,7 +33,7 @@ export class CreateEmployee extends Component<Props, State> {
       fullname: { required: true, minlength: 5, strAlpha: true },
       phoneNumber: { required: true, minlength: 10, phoneNumber: true },
       email: { required: true, email: true },
-      position: { required: true, alphanumeric: true },
+      position: { required: true },
       salary: { required: true, numeric: true },
     };
     this.label = {
@@ -54,32 +55,34 @@ export class CreateEmployee extends Component<Props, State> {
     const { data } = this.state;
     return (
       <>
-        <Header title={"CREATE EMPLOYEE PROFILE"} />
-        <FormValidator
-          data={data}
-          rules={this.rules}
-          validateForm={ValidateCustomField}
-          setErrorState={this.setErrorState}
-        >
-          <StyledEmployeeForm>
-            <StyledFormField>
-              {Object.entries(data).map(([key, value]) => (
-                <Fragment key={key}>
-                  <label className={"required"} htmlFor={key}>
-                    {this.label[key]}
-                  </label>
-                  <input
-                    name={key}
-                    value={value}
-                    onChange={this.updateFormValue}
-                    required
-                  />
-                  <ValidationMessage field={key} />
-                </Fragment>
-              ))}
-            </StyledFormField>
-          </StyledEmployeeForm>
-        </FormValidator>
+        <Container>
+          <Header title={"CREATE EMPLOYEE PROFILE"} />
+          <FormValidator
+            data={data}
+            rules={this.rules}
+            validateForm={ValidateCustomField}
+            setErrorState={this.setErrorState}
+          >
+            <StyledEmployeeForm>
+              <StyledFormField>
+                {Object.entries(data).map(([key, value]) => (
+                  <Fragment key={key}>
+                    <label className={"required"} htmlFor={key}>
+                      {this.label[key]}
+                    </label>
+                    <input
+                      name={key}
+                      value={value}
+                      onChange={this.updateFormValue}
+                      required
+                    />
+                    <ValidationMessage field={key} />
+                  </Fragment>
+                ))}
+              </StyledFormField>
+            </StyledEmployeeForm>
+          </FormValidator>
+        </Container>
       </>
     );
   }

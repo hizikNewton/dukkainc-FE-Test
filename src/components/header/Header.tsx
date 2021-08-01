@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as Menu } from "../../assets/icons/menu.svg";
-import { Title, VerticalBar } from "./styles";
+import * as S from "./styles";
 
 interface Props {
   title?: string;
@@ -9,15 +9,16 @@ interface Props {
 export const Header = ({ title }: Props) => {
   return (
     <>
-      <div>
+      <S.Header>
         <Menu />
-        <VerticalBar />
-        <div>
+        <S.VerticalBar />
+        <S.Samsys>
           <h2>{"SAMASYS"}</h2>
           <h5>{"combat salary fraud"}</h5>
-        </div>
-      </div>
-      <Title>{title}</Title>
+        </S.Samsys>
+      </S.Header>
+      <S.HRStyle />
+      <S.Title>{title}</S.Title>
     </>
   );
 };
